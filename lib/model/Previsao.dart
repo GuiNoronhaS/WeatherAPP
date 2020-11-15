@@ -9,6 +9,8 @@ class Previsao {
   final String city;
   final int humidity;
   final String condition;
+  final String sunrise;
+  final String sunset;
   final List<FuturasPrevisoes> previsoesSemana;
 
     Previsao({
@@ -19,6 +21,8 @@ class Previsao {
     @required this.city,
     @required this.humidity,
     @required this.condition,
+    @required this.sunrise,
+    @required this.sunset,
     @required this.previsoesSemana,
   });
 }

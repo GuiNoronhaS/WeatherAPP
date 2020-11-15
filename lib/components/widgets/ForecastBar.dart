@@ -18,7 +18,7 @@ class ForecastBar extends StatelessWidget {
               horizontal: 10,
               vertical: 3,
             ),
-            child: retornaImage(previsao.condicao),
+            child: _retornaImage(previsao.condicao),
             ),
         Text("${previsao.tempMin} Min - ${previsao.tempMax} Max", style: TextStyle(fontSize: 7),),
         Text(previsao.descricao, style: TextStyle(fontSize: 8),),
@@ -26,7 +26,7 @@ class ForecastBar extends StatelessWidget {
     );
   }
 
-  retornaImage(String cond) {
+  _retornaImage(String cond) {
     switch(cond){
       case "storm": {
         return Image.asset('assets/images/storm.png', fit: BoxFit.cover,);

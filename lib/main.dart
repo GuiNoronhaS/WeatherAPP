@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:weatherApp/components/widgets/ForecastCard.dart';
+import 'package:weatherApp/components/widgets/ForecastDay.dart';
 import 'package:weatherApp/components/widgets/SearchBar.dart';
 import 'package:weatherApp/model/FuturasPrevisoes.dart';
+import 'package:weatherApp/model/Previsao.dart';
 
 import 'components/theme/appTheme.dart';
 
@@ -66,6 +68,56 @@ class _MyHomePageState extends State<MyHomePage> {
         tempMin: 11),
   ];
 
+  Previsao testeG = new Previsao(
+    city: "testett",
+    condition: "fog",
+    date: "teste",
+    description: "testec",
+    humidity: 99,
+    sunrise: "testess",
+    sunset: "none_day",
+    temp: 77,
+    time: "none_dasssy",
+    previsoesSemana: [
+      FuturasPrevisoes(
+          condicao: "none_day",
+          data: "teste",
+          descricao: "gteste",
+          tempMax: 22,
+          tempMin: 11),
+      FuturasPrevisoes(
+          condicao: "none_night",
+          data: "teste",
+          descricao: "gteste",
+          tempMax: 22,
+          tempMin: 11),
+      FuturasPrevisoes(
+          condicao: "fog",
+          data: "teste",
+          descricao: "gteste",
+          tempMax: 22,
+          tempMin: 11),
+      FuturasPrevisoes(
+          condicao: "hail",
+          data: "teste",
+          descricao: "gteste",
+          tempMax: 22,
+          tempMin: 11),
+      FuturasPrevisoes(
+          condicao: "rain",
+          data: "rain",
+          descricao: "gteste",
+          tempMax: 22,
+          tempMin: 11),
+      FuturasPrevisoes(
+          condicao: "cloudly_night",
+          data: "cloudly_night",
+          descricao: "gteste",
+          tempMax: 22,
+          tempMin: 11),
+    ],
+  );
+
   @override
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([
@@ -73,7 +125,7 @@ class _MyHomePageState extends State<MyHomePage> {
     ]);
 
     final appbar = AppBar(
-      title: Text("Weather App"),
+      title: Text("Weather APP"),
       centerTitle: true,
       backgroundColor: Colors.lightBlue,
     );
@@ -84,32 +136,53 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       appBar: appbar,
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[
-          Container(
-            margin: EdgeInsets.all(5),
-            width: availableWidth * 0.99,
-            child: ForecastCard(teste),
+      body: SingleChildScrollView(
+        physics: ClampingScrollPhysics(),
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+            maxHeight: availableHeight,
+            maxWidth: availableWidth,
           ),
-          Container(
-            margin: EdgeInsets.all(30),
-            width: availableWidth * 0.8,
-            child: SearchBar(),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.all(5),
+                width: availableWidth * 0.97,
+                child: ForecastCard(teste),
+              ),
+              Container(
+                margin: EdgeInsets.all(5),
+                height: availableHeight * 0.55,
+                width: availableWidth * 0.97,
+                child: ForecastDay(testeG),
+              ),
+              Container(
+                margin: EdgeInsets.all(5),
+                width: availableWidth * 0.97,
+                child: Card(
+                  elevation: 5,
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: SearchBar(),
+                  ),
+                ),
+              ),
+              Spacer(),
+              Container(
+                child: Text(
+                  "Credits: Icons made by iconixar from www.flaticon.com",
+                  style: defaultTheme.textTheme.subtitle2,
+                  //style: TextStyle(fontFamily: 'Lato-Regular',fontWeight: FontWeight.w300,fontSize: 12),
+                ),
+              ),
+              SizedBox(
+                height: 5,
+              )
+            ],
           ),
-          Spacer(),
-          Container(
-            child: Text(
-              "Icon Credits: Icons made by iconixar from www.flaticon.com",
-              style: defaultTheme.textTheme.subtitle2,
-              //style: TextStyle(fontFamily: 'Lato-Regular',fontWeight: FontWeight.w300,fontSize: 12),
-            ),
-          ),
-          SizedBox(
-            height: 5,
-          )
-        ],
+        ),
       ),
     );
   }
