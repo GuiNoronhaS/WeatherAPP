@@ -60,6 +60,9 @@ flutter:
       - assets/images/snowy.png
       - assets/images/storm.png
       - assets/images/sun.png
+      - assets/images/sunset.png
+      - assets/images/sunrise.png
+      - assets/images/humidity.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

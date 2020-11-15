@@ -15,7 +15,7 @@ class SearchBar extends StatelessWidget {
         labelStyle: Theme.of(context).textTheme.headline6,
         hintText: 'Florianópolis',
         hintStyle: Theme.of(context).textTheme.subtitle1,
-        border: InputBorder.none
+        border: InputBorder.none,
       ),
     );
   }

@@ -35,8 +35,8 @@ _buildTheme() {
             fontWeight: FontWeight.w300,
           ),
           subtitle1: TextStyle(
-            fontSize: 9,
-            fontWeight: FontWeight.w300,
+            fontSize: 16,
+            fontWeight: FontWeight.w700,
             color: Colors.grey,
           ),
           button: TextStyle(
