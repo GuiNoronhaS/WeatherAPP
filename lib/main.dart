@@ -6,7 +6,6 @@ import 'package:weatherApp/model/FuturasPrevisoes.dart';
 
 import 'components/theme/appTheme.dart';
 
-
 void main() {
   runApp(MyApp());
 }
@@ -28,14 +27,43 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   List<FuturasPrevisoes> teste = [
-    FuturasPrevisoes(condicao: "none_day",data: "teste",descricao: "gteste",tempMax: 22,tempMin:11 ),
-    FuturasPrevisoes(condicao: "none_day",data: "teste",descricao: "gteste",tempMax: 22,tempMin:11 ),
-    FuturasPrevisoes(condicao: "none_day",data: "teste",descricao: "gteste",tempMax: 22,tempMin:11 ),
-    FuturasPrevisoes(condicao: "none_day",data: "teste",descricao: "gteste",tempMax: 22,tempMin:11 ),
-    FuturasPrevisoes(condicao: "none_day",data: "teste",descricao: "gteste",tempMax: 22,tempMin:11 ),
-    FuturasPrevisoes(condicao: "none_day",data: "teste",descricao: "gteste",tempMax: 22,tempMin:11 ),
+    FuturasPrevisoes(
+        condicao: "none_day",
+        data: "teste",
+        descricao: "gteste",
+        tempMax: 22,
+        tempMin: 11),
+    FuturasPrevisoes(
+        condicao: "none_day",
+        data: "teste",
+        descricao: "gteste",
+        tempMax: 22,
+        tempMin: 11),
+    FuturasPrevisoes(
+        condicao: "none_day",
+        data: "teste",
+        descricao: "gteste",
+        tempMax: 22,
+        tempMin: 11),
+    FuturasPrevisoes(
+        condicao: "none_day",
+        data: "teste",
+        descricao: "gteste",
+        tempMax: 22,
+        tempMin: 11),
+    FuturasPrevisoes(
+        condicao: "none_day",
+        data: "teste",
+        descricao: "gteste",
+        tempMax: 22,
+        tempMin: 11),
+    FuturasPrevisoes(
+        condicao: "none_day",
+        data: "teste",
+        descricao: "gteste",
+        tempMax: 22,
+        tempMin: 11),
   ];
 
   @override
@@ -57,18 +85,29 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: appbar,
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
           Container(
             margin: EdgeInsets.all(5),
             width: availableWidth * 0.99,
-            child:  ForecastCard(teste),
+            child: ForecastCard(teste),
           ),
           Container(
             margin: EdgeInsets.all(30),
             width: availableWidth * 0.8,
             child: SearchBar(),
+          ),
+          Spacer(),
+          Container(
+            child: Text(
+              "Icon Credits: Icons made by iconixar from www.flaticon.com",
+              style: ThemeData().textTheme.subtitle2,
+              //style: TextStyle(fontFamily: 'Lato-Regular',fontWeight: FontWeight.w300,fontSize: 12),
+            ),
+          ),
+          SizedBox(
+            height: 5,
           )
         ],
       ),
