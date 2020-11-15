@@ -48,6 +48,18 @@ flutter:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
+  assets:
+      - assets/images/waiting.png
+      - assets/images/cloudy-1.png
+      - assets/images/cloudy-2.png
+      - assets/images/cloudy-3.png
+      - assets/images/foog.png
+      - assets/images/hail.png
+      - assets/images/night.png
+      - assets/images/rainy.png
+      - assets/images/snowy.png
+      - assets/images/storm.png
+      - assets/images/sun.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -72,5 +84,13 @@ flutter:
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
+  fonts:
+      - family: Lato-Regular
+        fonts:
+          - asset: assets/fonts/Lato-Regular.ttf
+          - asset: assets/fonts/Lato-Light.ttf
+            weight: 300
+          - asset: assets/fonts/Lato-Bold.ttf
+            weight: 700
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
