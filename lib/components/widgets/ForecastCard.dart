@@ -22,22 +22,27 @@ class ForecastCard extends StatelessWidget {
               fit: FlexFit.tight,
               child: ForecastBar(listaPrev[0]),
             ),
+            SizedBox(width: 5,),
             Flexible(
               fit: FlexFit.tight,
               child: ForecastBar(listaPrev[1]),
             ),
+            SizedBox(width: 5,),
             Flexible(
               fit: FlexFit.tight,
               child: ForecastBar(listaPrev[2]),
             ),
+            SizedBox(width: 5,),
             Flexible(
               fit: FlexFit.tight,
               child: ForecastBar(listaPrev[3]),
             ),
+            SizedBox(width: 5,),
             Flexible(
               fit: FlexFit.tight,
               child: ForecastBar(listaPrev[4]),
             ),
+            SizedBox(width: 5,),
             Flexible(
               fit: FlexFit.tight,
               child: ForecastBar(listaPrev[5]),

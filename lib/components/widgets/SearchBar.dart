@@ -12,7 +12,9 @@ class SearchBar extends StatelessWidget {
       onSubmitted: (_) => {},
       decoration: InputDecoration(
         labelText: 'Digite a cidade a ser pesquisada',
-        labelStyle: ThemeData().textTheme.headline6,
+        labelStyle: Theme.of(context).textTheme.headline6,
+        hintText: 'Florianópolis',
+        hintStyle: Theme.of(context).textTheme.subtitle1,
         border: InputBorder.none
       ),
     );

@@ -35,32 +35,32 @@ class _MyHomePageState extends State<MyHomePage> {
         tempMax: 22,
         tempMin: 11),
     FuturasPrevisoes(
-        condicao: "none_day",
+        condicao: "none_night",
         data: "teste",
         descricao: "gteste",
         tempMax: 22,
         tempMin: 11),
     FuturasPrevisoes(
-        condicao: "none_day",
+        condicao: "fog",
         data: "teste",
         descricao: "gteste",
         tempMax: 22,
         tempMin: 11),
     FuturasPrevisoes(
-        condicao: "none_day",
+        condicao: "hail",
         data: "teste",
         descricao: "gteste",
         tempMax: 22,
         tempMin: 11),
     FuturasPrevisoes(
-        condicao: "none_day",
-        data: "teste",
+        condicao: "rain",
+        data: "rain",
         descricao: "gteste",
         tempMax: 22,
         tempMin: 11),
     FuturasPrevisoes(
-        condicao: "none_day",
-        data: "teste",
+        condicao: "cloudly_night",
+        data: "cloudly_night",
         descricao: "gteste",
         tempMax: 22,
         tempMin: 11),
@@ -102,7 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Container(
             child: Text(
               "Icon Credits: Icons made by iconixar from www.flaticon.com",
-              style: ThemeData().textTheme.subtitle2,
+              style: defaultTheme.textTheme.subtitle2,
               //style: TextStyle(fontFamily: 'Lato-Regular',fontWeight: FontWeight.w300,fontSize: 12),
             ),
           ),
