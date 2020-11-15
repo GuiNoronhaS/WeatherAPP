@@ -14,20 +14,36 @@ class ForecastCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 6,
-      margin: EdgeInsets.all(20),
       child: Padding(
         padding: const EdgeInsets.all(10),
-        child: Row(
-          children: [
-            ForecastBar(listaPrev[1]),
-            ForecastBar(listaPrev[2]),
-            ForecastBar(listaPrev[3]),
-            ForecastBar(listaPrev[4]),
-            ForecastBar(listaPrev[5]),
-            ForecastBar(listaPrev[6]),
-          ],
+        child:  Row(
+          children: [ 
+            Flexible(
+              fit: FlexFit.tight,
+              child: ForecastBar(listaPrev[0]),
+            ),
+            Flexible(
+              fit: FlexFit.tight,
+              child: ForecastBar(listaPrev[1]),
+            ),
+            Flexible(
+              fit: FlexFit.tight,
+              child: ForecastBar(listaPrev[2]),
+            ),
+            Flexible(
+              fit: FlexFit.tight,
+              child: ForecastBar(listaPrev[3]),
+            ),
+            Flexible(
+              fit: FlexFit.tight,
+              child: ForecastBar(listaPrev[4]),
+            ),
+            Flexible(
+              fit: FlexFit.tight,
+              child: ForecastBar(listaPrev[5]),
+            ),
+          ]),
         ),
-      ),
     );
   }
 }

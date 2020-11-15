@@ -12,7 +12,7 @@ class ForecastBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(previsao.data),
+        Text(previsao.data, style: TextStyle(fontSize: 8),),
         Container(
             margin: EdgeInsets.symmetric(
               horizontal: 10,
@@ -20,52 +20,52 @@ class ForecastBar extends StatelessWidget {
             ),
             child: retornaImage(previsao.condicao),
             ),
-        Text("${previsao.tempMin} Min - ${previsao.tempMax} Max"),
-        Text(previsao.descricao),
+        Text("${previsao.tempMin} Min - ${previsao.tempMax} Max", style: TextStyle(fontSize: 7),),
+        Text(previsao.descricao, style: TextStyle(fontSize: 8),),
       ],
     );
   }
 
   retornaImage(String cond) {
     switch(cond){
-      case "storm" {
+      case "storm": {
         return Image.asset('assets/images/waiting.png', fit: BoxFit.cover,);
         }
         break;
-      case "snow" {
+      case "snow": {
         return Image.asset('assets/images/waiting.png', fit: BoxFit.cover,);
       } 
       break;
-      case "hail" {
+      case "hail": {
         return Image.asset('assets/images/waiting.png', fit: BoxFit.cover,);
       } 
       break;
-      case "rain" {
+      case "rain": {
         return Image.asset('assets/images/waiting.png', fit: BoxFit.cover,);
       } 
       break;
-      case "fog" {
+      case "fog": {
         return Image.asset('assets/images/waiting.png', fit: BoxFit.cover,);
       } 
       break;
-      case "cloud" {
+      case "cloud": {
         return Image.asset('assets/images/waiting.png', fit: BoxFit.cover,);
       } 
       break;
-      case "cloudly_day" {
+      case "cloudly_day": {
         return Image.asset('assets/images/waiting.png', fit: BoxFit.cover,);
       } 
       break;
-      case "cloudly_night" {
+      case "cloudly_night": {
         return Image.asset('assets/images/waiting.png', fit: BoxFit.cover,);
       } 
       break;
-      default {
+      default: {
         if(cond == "none_day" || cond == "clear_day") {
           return Image.asset('assets/images/waiting.png', fit: BoxFit.cover,);
         } else {
           //none_night or clear_night
-          return Image.asset('assets/images/waiting.png', fit: BoxFit.cover,);
+          return Image.asset('assets/images/waiting.png', fit: BoxFit.scaleDown,);
         }
       }
     }
