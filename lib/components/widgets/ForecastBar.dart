@@ -18,11 +18,8 @@ class ForecastBar extends StatelessWidget {
               horizontal: 10,
               vertical: 3,
             ),
-            child: Image.asset(
-              'assets/images/',
-              fit: BoxFit.cover,
+            child: retornaImage(previsao.condicao),
             ),
-          ),
         Text("${previsao.tempMin} Min - ${previsao.tempMax} Max"),
         Text(previsao.descricao),
       ],
@@ -32,42 +29,43 @@ class ForecastBar extends StatelessWidget {
   retornaImage(String cond) {
     switch(cond){
       case "storm" {
+        return Image.asset('assets/images/waiting.png', fit: BoxFit.cover,);
         }
         break;
       case "snow" {
-        return
+        return Image.asset('assets/images/waiting.png', fit: BoxFit.cover,);
       } 
       break;
       case "hail" {
-        return
+        return Image.asset('assets/images/waiting.png', fit: BoxFit.cover,);
       } 
       break;
       case "rain" {
-        return
+        return Image.asset('assets/images/waiting.png', fit: BoxFit.cover,);
       } 
       break;
       case "fog" {
-        return
+        return Image.asset('assets/images/waiting.png', fit: BoxFit.cover,);
       } 
       break;
       case "cloud" {
-        return
+        return Image.asset('assets/images/waiting.png', fit: BoxFit.cover,);
       } 
       break;
       case "cloudly_day" {
-        return
+        return Image.asset('assets/images/waiting.png', fit: BoxFit.cover,);
       } 
       break;
       case "cloudly_night" {
-        return
+        return Image.asset('assets/images/waiting.png', fit: BoxFit.cover,);
       } 
       break;
       default {
         if(cond == "none_day" || cond == "clear_day") {
-          return
+          return Image.asset('assets/images/waiting.png', fit: BoxFit.cover,);
         } else {
           //none_night or clear_night
-          return
+          return Image.asset('assets/images/waiting.png', fit: BoxFit.cover,);
         }
       }
     }
