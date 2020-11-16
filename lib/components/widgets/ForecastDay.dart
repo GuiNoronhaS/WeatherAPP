@@ -47,7 +47,7 @@ class ForecastDay extends StatelessWidget {
                         height: 25,
                         width: 25,
                         margin: EdgeInsets.symmetric(
-                          horizontal: 10,
+                          horizontal: 5,
                           vertical: 3,
                         ),
                         child: Image.asset(
@@ -55,7 +55,7 @@ class ForecastDay extends StatelessWidget {
                           fit: BoxFit.cover,
                         ),
                       ),
-                      Text('${today.humidity} %'),
+                      Text('${today.humidity}%'),
                     ],
                   ),
                 ),
@@ -66,7 +66,7 @@ class ForecastDay extends StatelessWidget {
                         height: 50,
                         width: 50,
                         margin: EdgeInsets.symmetric(
-                          horizontal: 10,
+                          horizontal: 5,
                           vertical: 3,
                         ),
                         child: Image.asset(
@@ -85,7 +85,7 @@ class ForecastDay extends StatelessWidget {
                         height: 50,
                         width: 50,
                         margin: EdgeInsets.symmetric(
-                          horizontal: 10,
+                          horizontal: 5,
                           vertical: 3,
                         ),
                         child: Image.asset(
@@ -181,7 +181,6 @@ class ForecastDay extends StatelessWidget {
               fit: BoxFit.cover,
             );
           } else {
-            //none_night or clear_night
             return Image.asset(
               'assets/images/night.png',
               fit: BoxFit.cover,

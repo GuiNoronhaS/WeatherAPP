@@ -64,7 +64,6 @@ class ForecastBar extends StatelessWidget {
         if(cond == "none_day" || cond == "clear_day") {
           return Image.asset('assets/images/sun.png', fit: BoxFit.cover,);
         } else {
-          //none_night or clear_night
           return Image.asset('assets/images/night.png', fit: BoxFit.cover,);
         }
       }
