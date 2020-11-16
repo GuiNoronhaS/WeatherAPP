@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class SearchBar extends StatelessWidget {
+  final Function(String cidade) request;
+
+  SearchBar(this.request);
 
   final textController = TextEditingController();
 
@@ -9,16 +12,14 @@ class SearchBar extends StatelessWidget {
     return TextField(
       controller: textController,
       keyboardType: TextInputType.text,
-      onSubmitted: (_) => {},
+      onSubmitted: request,
       decoration: InputDecoration(
         labelText: 'Digite a cidade a ser pesquisada',
         labelStyle: Theme.of(context).textTheme.headline6,
-        hintText: 'Florianópolis',
+        hintText: 'Exemplo: Florianópolis',
         hintStyle: Theme.of(context).textTheme.subtitle1,
         border: InputBorder.none,
       ),
     );
   }
-
-
 }
